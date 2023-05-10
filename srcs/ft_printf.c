@@ -6,7 +6,7 @@
 /*   By: mabbadi <mabbadi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 16:56:31 by mabbadi           #+#    #+#             */
-/*   Updated: 2023/05/10 12:35:10 by mabbadi          ###   ########.fr       */
+/*   Updated: 2023/05/10 15:27:28 by mabbadi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,9 @@ int	ft_formats(va_list args, const char format)
 	else if (format == 'u')
 		print_length += ft_printunsigned(va_arg(args, unsigned int));
 	else if (format == 'x')
-		print_length += ft_printhex(va_arg(args, unsigned int), 'x');
+		print_length += ft_printhexmin(va_arg(args, unsigned int));
 	else if (format == 'X')
-		print_length += ft_printhex(va_arg(args, unsigned int), 'X');
+		print_length += ft_printhexmaj(va_arg(args, unsigned int));
 	else if (format == '%')
 		print_length += ft_printpercent();
 	return (print_length);
